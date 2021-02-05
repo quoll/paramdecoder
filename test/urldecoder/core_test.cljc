@@ -1,5 +1,5 @@
 (ns urldecoder.core-test
-  (:require [clojure.test :refer :all]
+  (:require [clojure.test :refer [deftest testing is run-tests]]
             [paramdecoder.core :refer [param-decode]]))
 
 (deftest simple-test
@@ -60,3 +60,4 @@
            (param-decode "%61%72%67#fragment=x")))))
 
 
+#?(:cljs (run-tests))
